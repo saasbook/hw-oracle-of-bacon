@@ -1,7 +1,15 @@
-source :rubygems
+source 'https://rubygems.org'
 
-ruby '1.9.3'
+ruby '2.2.2'
 
 gem 'nokogiri'
-gem 'fakeweb'
-gem 'debugger'
+gem 'byebug'
+gem 'activemodel', '4.2.1'
+
+group :test do
+  gem 'fakeweb'
+  gem 'rspec', '3.3.0'
+  gem 'rspec-its'
+end
+
+

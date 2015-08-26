@@ -1,7 +1,8 @@
 require 'oracle_of_bacon'
 
+require 'byebug'
 require 'fakeweb'
-require 'debugger'
+require 'spec_helper'
 
 describe OracleOfBacon do
   before(:all) { FakeWeb.allow_net_connect = false }
@@ -82,12 +83,12 @@ describe OracleOfBacon do
   describe 'service connection', :pending => true do
     before(:each) do
       @oob = OracleOfBacon.new
-      @oob.stub(:valid?).and_return(true)
+      allow(@oob).to receive(:valid?).and_return(true)
     end
     it 'should create XML if valid response' do
       body = File.read 'spec/graph_example.xml'
       FakeWeb.register_uri(:get, %r(http://oracleofbacon\.org), :body => body)
-      OracleOfBacon::Response.should_receive(:new).with(body)
+      expect(OracleOfBacon::Response).to receive(:new).with(body)
       @oob.find_connections
     end
     it 'should raise OracleOfBacon::NetworkError if network problem' do

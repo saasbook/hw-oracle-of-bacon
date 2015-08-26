@@ -1,4 +1,4 @@
-require 'debugger'              # optional, may be helpful
+require 'byebug'                # optional, may be helpful
 require 'open-uri'              # allows open('http://...') to return body
 require 'cgi'                   # for escaping URIs
 require 'nokogiri'              # XML parser
