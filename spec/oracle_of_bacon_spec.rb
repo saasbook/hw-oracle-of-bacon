@@ -3,6 +3,7 @@ require 'oracle_of_bacon'
 require 'byebug'
 require 'fakeweb'
 require 'spec_helper'
+require 'rspec/collection_matchers'
 
 describe OracleOfBacon do
   before(:all) { FakeWeb.allow_net_connect = false }
