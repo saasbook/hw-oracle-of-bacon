@@ -237,7 +237,7 @@ and `//actor` applied to a successful response returns a collection
 the document's root.
 
 (If you want to experiment interactively with XPath to learn more about
-it, [the XPathTester site](http://www.xpathtester.com/) lets you paste
+it, [the XPathTester site](http://codebeautify.org/Xpath-Tester) lets you paste
 a blob of XML and try various XPath expressions on it to see which
 elements are returned.)
 
