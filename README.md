@@ -87,9 +87,9 @@ replace `my_key` with the valid API key above):
 
 which connects Laurence Olivier with Kevin Bacon, or
 
-    http://oracleofbacon.org/cgi-bin/xml?p=my_key&a=Carrie+Fisher&b=Ian+McKellen
+    http://oracleofbacon.org/cgi-bin/xml?p=my_key&a=Carrie+Fisher+(I)&b=Ian+McKellen
 
-which connects Carrie Fisher with Ian McKellen.
+which connects Carrie Fisher (I) with Ian McKellen.
 
 * Visually inspect the XML returned for each of the above queries.  You
 can view it by typing the URIs into a browser, or better, by using a
@@ -123,8 +123,8 @@ be able to run the above three examples as follows (again replacing
     oob.response.type      # => :graph
     oob.response.data      # => ['Kevin Bacon', 'The Big Picture (1989)', 'Eddie Albert (I)', 'Carrie (1952)', 'Laurence Olivier']
 
-    # connect Carrie Fisher to Ian McKellen
-    oob.from = 'Carrie Fisher'
+    # connect Carrie Fisher (I) to Ian McKellen
+    oob.from = 'Carrie Fisher (I)'
     oob.to = 'Ian McKellen'
     oob.find_connections
     oob.response.data      # => ['Ian McKellen', 'Doogal (2006)', ...etc]
@@ -363,7 +363,7 @@ be useful.)
 
 Believe it or not, you're done.  You can try firing up an `irb`
 interpreter and exercising the library by saying `load
-oracle_of_bacon.rb` and trying the examples in the code block in the
+'oracle_of_bacon.rb'` and trying the examples in the code block in the
 Background section of this handout!
 
 For fun, you can add a `draw_graph` method that does the following: if
