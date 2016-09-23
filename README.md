@@ -365,7 +365,7 @@ be useful.)
 
 Believe it or not, you're done.  You can try firing up an `irb`
 interpreter and exercising the library by saying `load
-'oracle_of_bacon.rb'` and trying the examples in the code block in the
+'./lib/oracle_of_bacon.rb'` and trying the examples in the code block in the
 Background section of this handout!
 
 For fun, you can add a `draw_graph` method that does the following: if
