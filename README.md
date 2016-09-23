@@ -115,30 +115,32 @@ make it easier to use the Oracle of Bacon.  With our new library, we'd
 be able to run the above three examples as follows (again replacing
 `my_api_key` with the valid key given previously).  
 
-    oob = OracleOfBacon.new('my_api_key')
+```rb
+oob = OracleOfBacon.new('my_api_key')
 
-    # connect Laurence Olivier to Kevin Bacon
-    oob.from = 'Laurence Olivier'
-    oob.find_connections
-    oob.response.type      # => :graph
-    oob.response.data      # => ['Kevin Bacon', 'The Big Picture (1989)', 'Eddie Albert (I)', 'Carrie (1952)', 'Laurence Olivier']
+# connect Laurence Olivier to Kevin Bacon
+oob.from = 'Laurence Olivier'
+oob.find_connections
+oob.response.type      # => :graph
+oob.response.data      # => ['Kevin Bacon', 'The Big Picture (1989)', 'Eddie Albert (I)', 'Carrie (1952)', 'Laurence Olivier']
 
-    # connect Carrie Fisher (I) to Ian McKellen
-    oob.from = 'Carrie Fisher (I)'
-    oob.to = 'Ian McKellen'
-    oob.find_connections
-    oob.response.data      # => ['Ian McKellen', 'Doogal (2006)', ...etc]
+# connect Carrie Fisher (I) to Ian McKellen
+oob.from = 'Carrie Fisher (I)'
+oob.to = 'Ian McKellen'
+oob.find_connections
+oob.response.data      # => ['Ian McKellen', 'Doogal (2006)', ...etc]
 
-    # with multiple matches
-    oob.to = 'Anthony Perkins'
-    oob.find_connections
-    oob.response.type      # => :spellcheck
-    oob.response.data      # => ['Anthony Perkins (I)', ...33 more variations of the name]
-    # with bad key
-    oob = OracleOfBacon.new('known_bad_key')
-    oob.find_connections
-    oob.response.type      # => :error
-    oob.response.data      # => 'Unauthorized access'
+# with multiple matches
+oob.to = 'Anthony Perkins'
+oob.find_connections
+oob.response.type      # => :spellcheck
+oob.response.data      # => ['Anthony Perkins (I)', ...33 more variations of the name]
+# with bad key
+oob = OracleOfBacon.new('known_bad_key')
+oob.find_connections
+oob.response.type      # => :error
+oob.response.data      # => 'Unauthorized access'
+```
 
 # Part 1: Valid instance object
 
