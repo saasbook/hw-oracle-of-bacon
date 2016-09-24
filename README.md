@@ -48,10 +48,12 @@ of specs for this assignment.  The assignment has 4 parts; each part has
 its own specs in a `describe` group.  Initially, all specs are marked
 `:pending => true` so you don't get a rash of failing tests when you
 start the assignment; when you start work on any one part of the
-assignment, remove the pending option from the describe block, watch the
+assignment, remove the pending option from the describe block, and run 
+that specific block using a command like `rspec spec/oracle_of_bacon_spec.rb:10`, 
+which runs the set of tests encompassed in the block starting on that line number.  Watch the
 group of tests fail, and then start writing the code to make them pass.
 (This is a crude version of the Test-Driven Development methodology we
-embrace later in the course; in the full version of TDD, you will write
+use in other parts of the course; in the full version of TDD, you write
 your own tests one at a time, watching each one fail and then creating
 the code to make it pass.)
 
@@ -159,14 +161,11 @@ presence of non-blank From, To, and APIKey attributes in an
 OracleOfBacon instance.  
 
 1. In the root directory of this homework (the one containing `lib` and
-`spec` subdirectories), start `autotest`.  It will look for tests in
-`spec` and for your code in `lib/oracle_of_bacon.rb`.  If `autotest`
-appears to do nothing: Check that you are running it in the code's root
-directory (the one that has `lib` and `spec` as subdirectories) and that
-the `.rspec` file exists in this root directory.
+`spec` subdirectories), run `rspec`.  It will look for tests in
+`spec` and for your code in `lib/oracle_of_bacon.rb`.  
 
 2. Delete `,:pending => true` from the `describe 'instance'` block,
-which should immediately cause that set of tests to fail red.
+and run `rspec spec/oracle_of_bacon_spec.rb:10`.
 Visually inspect the failing specs to get a feel for how they are written.
 Don't worry if you don't understand everything that's going on; the goal
 is to get you accustomed to reading code and seeing common idioms.
@@ -380,5 +379,18 @@ characters ---
 
 ---and if the result type is anything else (including `nil` when there
 is no result yet), it prints an error.
+
+##Extra challenges
+
+* Try getting setup with 
+an automated test framework such as [guard](http://code.tutsplus.com/tutorials/testing-your-ruby-code-with-guard-rspec-pry--cms-19974) or [autotest](https://rubygems.org/gems/autotest).  Guard or AutoTest can be set up so that 
+they will run all the tests in `spec/`, but every time you edit and save 
+your code file, the tests are automatically re-run, so you don't have to 
+run them manually.  As we'll see later, this is the "watch the test fail" 
+part of the TDD or test-driven process of development: write the tests before
+you write the code, watch the test fail, fill in the code and save the code file, 
+then watch the test pass!
+
+* Try pairing using the [one-undermanship pair programming style](http://www.agileventures.org/remote-pair-programming/pair-programming-protocols)
 
 
