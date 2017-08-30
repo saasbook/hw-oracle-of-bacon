@@ -1,6 +1,8 @@
 The Oracle of Bacon
 ===================
 
+**NOTE: Do not clone this repo to your workspace. Fork it first, then clone your fork.**
+
 The goals of this assignment are as follows:
 
 1. Give you more exposure to RSpec and to more advanced and idiomatic
