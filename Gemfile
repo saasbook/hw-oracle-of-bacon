@@ -1,10 +1,10 @@
 source 'https://rubygems.org'
 
-ruby '2.3.0'
+ruby '2.4.0'
 
 gem 'nokogiri'
 gem 'byebug'
-gem 'activemodel', '4.2.1'
+gem 'activemodel', '4.2.10'
 
 group :test do
   gem 'fakeweb'
