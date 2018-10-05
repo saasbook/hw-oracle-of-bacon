@@ -7,7 +7,7 @@ gem 'byebug'
 gem 'activemodel', '4.2.10'
 
 group :test do
-  gem 'fakeweb'
+  gem 'fakeweb', git: 'https://github.com/chrisk/fakeweb.git'
   gem 'rspec', '3.3.0'
   gem 'rspec-its'
   gem 'rspec-collection_matchers'
