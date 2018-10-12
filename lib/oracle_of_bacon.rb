@@ -19,12 +19,19 @@ class OracleOfBacon
   validates_presence_of :api_key
   validate :from_does_not_equal_to
 
-  def from_does_not_equal_to
-    # YOUR CODE HERE
-  end
+  FROM_TO_MESSAGE = 'From cannot be the same as To'
 
-  def initialize(api_key='')
-    # your code here
+  def from_does_not_equal_to
+    if (self.from == self.to)
+      errors.add(:from_does_not_equal_to, message: FROM_TO_MESSAGE) 
+    end
+  end
+  
+  def initialize(api_key='38b99ce9ec87')
+    @api_key = api_key
+    # that both From and To initially default to Kevin Bacon
+    @from = 'Kevin Bacon'
+    @to = 'Kevin Bacon'
   end
 
   def find_connections
